@@ -81,8 +81,27 @@ table(KenyaData$bcs)
 
 
 
-###### Sats < 90 ####
-KenyaData$sats_under_90 = if_else(KenyaData$oxysat < 90, "y", "n")
+###### Sats categories ####
+# Coding used:
+# 0 = Sats > 92%
+# 1 = Sats 90-92%
+# 2 = Sats < 90%
+
+ind = numeric(nrow(KenyaData))
+for(i in 1:nrow(KenyaData)){
+  tmp = KenyaData$oxysat[i]
+  if(tmp < 90){
+    ind[i] = 2
+  }
+  else if(tmp > 92){
+    ind[i] = 0
+  }
+  else{
+    ind[i] = 1
+  }
+}
+
+KenyaData$sats_category = ind
 
 ###### RSV postitivity ####
 # RSV-A

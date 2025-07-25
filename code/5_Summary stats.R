@@ -70,7 +70,6 @@ variables_of_interest_Binary = c("vomiting",
                                  "unable_to_drink",
                                  "diarrhoea",
                                  "cyanosis",
-                                 "sats_under_90",
                                  "head_nodding",
                                  "indrawing",
                                  "flaring",
@@ -96,7 +95,8 @@ variables_of_interest_ordinal = c("sex",
                                   "malnutrition_wflz",
                                   "conscious_level",
                                   "age_groups",
-                                  "respRate_category")
+                                  "respRate_category",
+                                  "sats_category")
 
 ##### Binary variable summary stats ####
 summaryTable_binary = tibble(variable = character(),
