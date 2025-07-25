@@ -16,9 +16,6 @@ KenyaData$PERCH = PERCH_fun(KenyaData)
 # PREPARE
 KenyaData$PREPARE = PREPARE_fun(KenyaData)
 
-# PREPARE (No sats)
-KenyaData$PREPARE_no_SATS = PREPARE_fun_no_sats(KenyaData)
-
 # ReSVinet
 KenyaData$ReSVinet = ReSVinet_fun(KenyaData)
 
